@@ -1,5 +1,7 @@
 // src/pages/articles/IntegracaoAPIs.tsx
 import integracaoapi from '../../assets/integracao-apis.png';
+import api1 from '../../assets/api1.png';
+import api2 from '../../assets/api2.png';
 
 export default function IntegracaoAPIs() {
   return (
@@ -36,7 +38,7 @@ export default function IntegracaoAPIs() {
 
           {/* Espaço para imagem ilustrando o fluxo da API */}
           <div className="w-full h-60 bg-[#1b1b1b] rounded-lg flex items-center justify-center">
-            <p className="text-gray-500">[ Fluxo ou exemplo visual de API em uso ]</p>
+            <img src={api1} alt="" />
           </div>
 
           <h2 className="text-2xl font-semibold text-white mt-10">O impacto na experiência do usuário</h2>
@@ -60,7 +62,7 @@ export default function IntegracaoAPIs() {
 
           {/* Espaço para print do app com API integrada */}
           <div className="w-full h-60 bg-[#1b1b1b] rounded-lg flex items-center justify-center">
-            <p className="text-gray-500">[ Print do app com resposta da API ]</p>
+          <img src={api2} alt="" />
           </div>
 
           <p>
