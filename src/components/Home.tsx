@@ -22,6 +22,7 @@ import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import ilustracao from '../assets/ciclou.png';
 
+
 export default function Home() {
     // ⬇️ Cole isso AQUI:
     const [formData, setFormData] = useState({
@@ -317,7 +318,7 @@ export default function Home() {
                                                 Foco em backend, mobile e integrações.
                                             </p>
                                             <a
-                                                href="#portfolio"
+                                                href="/Trabalhos"
                                                 className="relative group inline-flex items-center px-5 py-2 border-2 border-[#43f8b6] text-[#43f8b6] rounded-full overflow-hidden transition-colors duration-300"
                                             >
                                                 <span
@@ -336,7 +337,7 @@ export default function Home() {
                                                 Sobre desenvolvimento, carreira, estudos e experiências. Em breve no meu blog!
                                             </p>
                                             <a
-                                                href="#blog"
+                                                href="/Artigos"
                                                 className="relative group inline-flex items-center px-5 py-2 border-2 border-[#43f8b6] text-[#43f8b6] rounded-full overflow-hidden transition-colors duration-300"
                                             >
                                                 <span
@@ -352,6 +353,104 @@ export default function Home() {
                             </section>
                         </div>
 
+                        {/* Seção 5 - Contato */}
+                        <div className="section bg-[#111111] text-white">
+                            <div className="flex flex-col justify-center px-6 md:px-20 h-screen overflow-y-auto">
+                                <div className="max-w-3xl mx-auto w-full py-10">
+                                    <h2 className="text-4xl font-bold text-[#43f8b6] mb-6">Entre em contato</h2>
+
+                                    <form onSubmit={sendEmail} className="space-y-6">
+                                        <div>
+                                            <label htmlFor="from_name" className="block mb-1 text-sm">Seu nome</label>
+                                            <input
+                                                type="text"
+                                                name="from_name"
+                                                required
+                                                value={formData.from_name}
+                                                onChange={handleChange}
+                                                className="w-full p-3 bg-[#1b1b1b] border border-[#43f8b6] rounded-md text-white"
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label htmlFor="reply_to" className="block mb-1 text-sm">Seu e-mail</label>
+                                            <input
+                                                type="email"
+                                                name="reply_to"
+                                                required
+                                                value={formData.reply_to}
+                                                onChange={handleChange}
+                                                className="w-full p-3 bg-[#1b1b1b] border border-[#43f8b6] rounded-md text-white"
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label htmlFor="message" className="block mb-1 text-sm">Mensagem</label>
+                                            <textarea
+                                                name="message"
+                                                required
+                                                rows={5}
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                className="w-full p-3 bg-[#1b1b1b] border border-[#43f8b6] rounded-md text-white resize-none"
+                                            ></textarea>
+                                        </div>
+
+                                        <button
+                                            type="submit"
+                                            disabled={isSending}
+                                            className="relative group inline-flex items-center px-6 py-3 border-2 border-[#43f8b6] text-[#43f8b6] rounded-full overflow-hidden transition-colors duration-300"
+                                        >
+                                            <span
+                                                className="absolute left-0 top-0 h-full w-0 bg-[#43f8b6] z-0 transition-all duration-500 ease-out group-hover:w-full"
+                                            ></span>
+                                            <span className="relative z-10 group-hover:text-black transition">
+                                                {isSending ? 'Enviando...' : 'Enviar mensagem'}
+                                            </span>
+                                        </button>
+
+                                        {sent && <p className="text-green-400 mt-4">Mensagem enviada com sucesso! ✅</p>}
+                                    </form>
+
+                                    {/* Bloco de contato + currículo lado a lado */}
+                                    <div className="mt-10 flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-400 gap-6">
+
+                                        {/* Dados de contato */}
+                                        <div>
+                                            <p className="mb-1">
+                                                <strong>Email:</strong> raphael.k.business@gmail.com
+                                            </p>
+                                            <p className="mb-1">
+                                                <strong>Telefone:</strong> (13) 98834-2378
+                                            </p>
+                                            <p className="mb-1">
+                                                <strong>GitHub:</strong>{' '}
+                                                <a
+                                                    href="https://github.com/rafokez"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-[#43f8b6] hover:underline"
+                                                >
+                                                    github.com/rafokez
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                        {/* Botão do currículo */}
+                                        <div>
+                                            <a
+                                                href="/curriculo.pdf"
+                                                download
+                                                className="inline-flex items-center gap-2 text-[#43f8b6] border border-[#43f8b6] px-4 py-2 rounded-full text-sm hover:bg-[#43f8b6] hover:text-black transition"
+                                            >
+                                                Baixar Currículo
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 );
             }}
