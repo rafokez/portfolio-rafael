@@ -1,5 +1,4 @@
 // src/pages/articles/EscolhaDasStacks.tsx
-import React from 'react';
 import capastacks from '../../assets/escolha-de-stacks.png';
 import fotohenrique from '../../assets/fotohenrique.jfif';
 

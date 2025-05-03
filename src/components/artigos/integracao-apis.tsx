@@ -1,5 +1,4 @@
 // src/pages/articles/IntegracaoAPIs.tsx
-import React from 'react';
 import integracaoapi from '../../assets/integracao-apis.png';
 
 export default function IntegracaoAPIs() {

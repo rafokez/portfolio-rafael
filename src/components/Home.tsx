@@ -8,7 +8,6 @@ import {
     SiNodedotjs,
     SiHtml5,
     SiCss3,
-    SiBootstrap,
     SiGit,
     SiFlutter,
     SiDart,
@@ -66,7 +65,7 @@ export default function Home() {
             navigationTooltips={['Início', 'Sobre', 'Tecnologias', 'Conteúdo', 'Contato']}
             showActiveTooltip
             scrollingSpeed={800}
-            render={({ fullpageApi }) => {
+            render={() => {
                 return (
                     <div>
                         {/* Seção 1 - Hero */}

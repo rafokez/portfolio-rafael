@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaGithub, FaEnvelope, FaPhoneAlt, FaDownload } from 'react-icons/fa';
 
 export default function Footer() {
