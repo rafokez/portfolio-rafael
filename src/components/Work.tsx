@@ -58,7 +58,7 @@ export default function Trabalhos() {
                 >
                   <span className="absolute left-0 top-0 h-full w-0 bg-[#111111] transition-all duration-500 ease-out group-hover:w-full z-[-1]"></span>
                   <span className="relative z-10 group-hover:text-[#43f8b6]">
-                    Acessar Projeto
+                    Acessar Projeto ➝
                   </span>
                 </a>
               </div>
