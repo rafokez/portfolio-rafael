@@ -1,6 +1,3 @@
-// src/components/Blog.tsx
-import React from 'react';
-
 const articles = [
   {
     date: '30 Abril 2025',
